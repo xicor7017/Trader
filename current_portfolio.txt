@@ -1,25 +1,25 @@
                            CURRENT PORTFOLIO                           
 
-Stock: LEN 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: TSLA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: FTI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: QCOM 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: NEE 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: MCHP 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: OKE 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: INTC 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: WYNN 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: LRCX 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: CPB 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: NOV 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: QRVO 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: UAL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: DVN 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: COTY 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: ENPH 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: EOG 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: APA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: ORCL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: BBWI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: NRG 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: SRE 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: ETSY 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: HBI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: EIX 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: APTV 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: NCLH 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: UA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: ADM 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: OXY 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: RCL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: UAA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: LVS 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: PHM 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: RRC 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: XEL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: GIS 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: DHI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: CHD 	 Percentage change: 0.0000% 	 Current Value: $50000.00
 
 Current Portfolio Value : $1000000.00 
 All Time High           : $1000000.00 
