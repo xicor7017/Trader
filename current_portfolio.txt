@@ -1,27 +1,27 @@
                            CURRENT PORTFOLIO                           
 
-Stock: ETSY 	 Percentage change: -1.2211% 	 Current Value: $49389.47
-Stock: DAL 	 Percentage change: 0.2437% 	 Current Value: $50121.83
-Stock: ALK 	 Percentage change: -0.6047% 	 Current Value: $49697.65
-Stock: BIO 	 Percentage change: 0.1236% 	 Current Value: $50002.97
-Stock: ALGN 	 Percentage change: 0.2252% 	 Current Value: $50676.39
-Stock: AMP 	 Percentage change: -0.0844% 	 Current Value: $49376.55
-Stock: MCK 	 Percentage change: -0.2311% 	 Current Value: $49868.49
-Stock: AVGO 	 Percentage change: -0.3424% 	 Current Value: $49812.85
-Stock: CHTR 	 Percentage change: -0.8641% 	 Current Value: $49940.21
-Stock: AXON 	 Percentage change: -1.1560% 	 Current Value: $49793.18
-Stock: NVR 	 Percentage change: 0.2603% 	 Current Value: $48882.27
-Stock: HOG 	 Percentage change: -0.1227% 	 Current Value: $50520.05
-Stock: ALIT 	 Percentage change: -0.0948% 	 Current Value: $50229.23
-Stock: EIX 	 Percentage change: -0.0622% 	 Current Value: $50650.22
-Stock: PSA 	 Percentage change: -0.2647% 	 Current Value: $50165.88
-Stock: HCA 	 Percentage change: 0.2576% 	 Current Value: $50920.02
-Stock: LEG 	 Percentage change: 0.1066% 	 Current Value: $50843.31
-Stock: COTY 	 Percentage change: -0.5760% 	 Current Value: $49981.55
-Stock: LUMN 	 Percentage change: -0.2478% 	 Current Value: $50971.70
-Stock: TPR 	 Percentage change: 0.0832% 	 Current Value: $51207.13
+Stock: ALGN 	 Percentage change: 0.2691% 	 Current Value: $50698.60
+Stock: AMP 	 Percentage change: -0.4174% 	 Current Value: $49212.02
+Stock: MCK 	 Percentage change: -0.2782% 	 Current Value: $49844.94
+Stock: NVR 	 Percentage change: 0.3998% 	 Current Value: $48950.26
+Stock: ALIT 	 Percentage change: 0.0000% 	 Current Value: $50276.88
+Stock: EIX 	 Percentage change: 0.1658% 	 Current Value: $50765.77
+Stock: PSA 	 Percentage change: -0.1291% 	 Current Value: $50234.11
+Stock: TPR 	 Percentage change: 0.1307% 	 Current Value: $51231.45
+Stock: HBI 	 Percentage change: -0.2172% 	 Current Value: $50109.39
+Stock: NUE 	 Percentage change: 0.3257% 	 Current Value: $49746.41
+Stock: CNC 	 Percentage change: 0.4222% 	 Current Value: $50359.42
+Stock: URI 	 Percentage change: -0.0214% 	 Current Value: $50480.56
+Stock: BBWI 	 Percentage change: 0.0000% 	 Current Value: $50491.35
+Stock: QRVO 	 Percentage change: 0.4351% 	 Current Value: $50711.04
+Stock: ILMN 	 Percentage change: 0.4786% 	 Current Value: $50733.02
+Stock: UAL 	 Percentage change: -0.2034% 	 Current Value: $50006.52
+Stock: OGN 	 Percentage change: -0.4880% 	 Current Value: $49863.87
+Stock: CVS 	 Percentage change: -0.6891% 	 Current Value: $49586.03
+Stock: DVN 	 Percentage change: -0.1587% 	 Current Value: $49931.88
+Stock: ENPH 	 Percentage change: 0.1963% 	 Current Value: $51160.02
 
-Current Portfolio Value : $1003050.95 
+Current Portfolio Value : $1004393.57 
                                                                        
 
 
