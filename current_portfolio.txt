@@ -1,27 +1,27 @@
                            CURRENT PORTFOLIO                           
 
-Stock: AAL 	 Percentage change: -0.5344% 	 Current Value: $49732.81
-Stock: ETSY 	 Percentage change: -0.2734% 	 Current Value: $49863.32
-Stock: UAL 	 Percentage change: -0.5264% 	 Current Value: $49736.81
-Stock: DAL 	 Percentage change: -0.5584% 	 Current Value: $49720.81
-Stock: NCLH 	 Percentage change: 0.4611% 	 Current Value: $50230.54
-Stock: HAL 	 Percentage change: 0.6592% 	 Current Value: $50329.60
-Stock: MTCH 	 Percentage change: 0.3119% 	 Current Value: $50155.97
+Stock: ETSY 	 Percentage change: -1.2211% 	 Current Value: $49389.47
+Stock: DAL 	 Percentage change: 0.2437% 	 Current Value: $50121.83
 Stock: ALK 	 Percentage change: -0.6047% 	 Current Value: $49697.65
-Stock: INTC 	 Percentage change: 0.5769% 	 Current Value: $50288.43
-Stock: WAT 	 Percentage change: 0.1704% 	 Current Value: $50085.18
-Stock: APTV 	 Percentage change: 0.0217% 	 Current Value: $50010.84
-Stock: FTI 	 Percentage change: 0.9040% 	 Current Value: $50452.02
-Stock: ILMN 	 Percentage change: -0.6430% 	 Current Value: $50191.75
-Stock: BIO 	 Percentage change: -0.8132% 	 Current Value: $49535.09
-Stock: WHR 	 Percentage change: -0.3799% 	 Current Value: $49751.48
-Stock: ALGN 	 Percentage change: -0.9693% 	 Current Value: $50072.44
-Stock: AMP 	 Percentage change: 0.2611% 	 Current Value: $49547.30
-Stock: APA 	 Percentage change: -0.4423% 	 Current Value: $50346.28
-Stock: MCK 	 Percentage change: 0.2519% 	 Current Value: $50109.88
-Stock: AVGO 	 Percentage change: -0.3503% 	 Current Value: $49808.92
+Stock: BIO 	 Percentage change: 0.1236% 	 Current Value: $50002.97
+Stock: ALGN 	 Percentage change: 0.2252% 	 Current Value: $50676.39
+Stock: AMP 	 Percentage change: -0.0844% 	 Current Value: $49376.55
+Stock: MCK 	 Percentage change: -0.2311% 	 Current Value: $49868.49
+Stock: AVGO 	 Percentage change: -0.3424% 	 Current Value: $49812.85
+Stock: CHTR 	 Percentage change: -0.8641% 	 Current Value: $49940.21
+Stock: AXON 	 Percentage change: -1.1560% 	 Current Value: $49793.18
+Stock: NVR 	 Percentage change: 0.2603% 	 Current Value: $48882.27
+Stock: HOG 	 Percentage change: -0.1227% 	 Current Value: $50520.05
+Stock: ALIT 	 Percentage change: -0.0948% 	 Current Value: $50229.23
+Stock: EIX 	 Percentage change: -0.0622% 	 Current Value: $50650.22
+Stock: PSA 	 Percentage change: -0.2647% 	 Current Value: $50165.88
+Stock: HCA 	 Percentage change: 0.2576% 	 Current Value: $50920.02
+Stock: LEG 	 Percentage change: 0.1066% 	 Current Value: $50843.31
+Stock: COTY 	 Percentage change: -0.5760% 	 Current Value: $49981.55
+Stock: LUMN 	 Percentage change: -0.2478% 	 Current Value: $50971.70
+Stock: TPR 	 Percentage change: 0.0832% 	 Current Value: $51207.13
 
-Current Portfolio Value : $999667.12 
+Current Portfolio Value : $1003050.95 
                                                                        
 
 
