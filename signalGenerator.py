@@ -1,16 +1,20 @@
 from fetchdata import fetch_price_data
 from parameters import Parameters
 import pickle, time, math, tqdm, subprocess, os
+import numpy as np
 
 class SignalGenerator:
     def __init__(self, symbols, parameters):
         self.symbols = symbols
         self.parameters = parameters
         self.unallocated_funds = 1000000
-        self.all_time_high = 0.0
+        self.all_time_high = 0
         self.all_time_low = float('inf')
 
-        os.mkdir("logs")
+        try:
+            os.mkdir("logs")
+        except:
+            pass
 
     def getdata(self):
         print("Fetching current price data...")
@@ -22,13 +26,14 @@ class SignalGenerator:
         volatilities, momentums = {}, {}
 
         for symbol, prices in data.items():
-            normalized_volatility = prices.std() / prices.mean()
-            mom_window = self.parameters.mom_window if len(prices) >= self.parameters.mom_window else len(prices)
-            normalized_momentum = (prices[-1] - prices[-mom_window]) / prices[-mom_window]
-            if math.isnan(normalized_volatility) or math.isnan(normalized_momentum):
-                continue
-            volatilities[symbol] = normalized_volatility
-            momentums[symbol] = normalized_momentum
+            if len(prices)>0:
+                normalized_volatility = prices.std() / prices.mean()
+                mom_window = self.parameters.mom_window if len(prices) >= self.parameters.mom_window else len(prices)
+                normalized_momentum = (prices[-1] - prices[-mom_window]) / prices[-mom_window]
+                if math.isnan(normalized_volatility) or math.isnan(normalized_momentum):
+                    continue
+                volatilities[symbol] = normalized_volatility
+                momentums[symbol] = normalized_momentum
 
         # Top N symbols by volatility
         top_vol = sorted(volatilities.items(), key=lambda x: x[1], reverse=True)[:self.parameters.top_n_volatility]
@@ -89,10 +94,10 @@ class SignalGenerator:
             buy_price     = self.buy_price[symbol]            
             percentage_change = ((current_price - buy_price) / buy_price)
 
-            if percentage_change > self.parameters.percentage_change_threshold:
+            if np.abs(percentage_change) > self.parameters.percentage_change_threshold:
                 stocks_to_sell.append(symbol)
+                unallocated_funds += allocation + (allocation * percentage_change)
 
-            unallocated_funds += allocation + (allocation * percentage_change)
             current_valuations[symbol] = allocation + (allocation * percentage_change)
 
         if len(stocks_to_sell) > 0:
@@ -181,8 +186,8 @@ class SignalGenerator:
             display_data += "\n"
         display_data += "\n"
         display_data += "Current Portfolio Value : ${:.2f} \n".format(total_value)
-        display_data += "All Time High           : ${:.2f} \n".format(self.all_time_high)
-        display_data += "All Time Low            : ${:.2f} \n".format(self.all_time_low)
+        #display_data += "All Time High           : ${:.2f} \n".format(self.all_time_high)
+        #display_data += "All Time Low            : ${:.2f} \n".format(self.all_time_low)
         display_data += "                                                                       "
         display_data += "\n\n"
 
@@ -211,13 +216,13 @@ class SignalGenerator:
 
             # Show current portfolio information
             display_data = None
-            try     : display_data = self.show_current_info(current_price_data)
-            except  : pass
+            display_data = self.show_current_info(current_price_data)
+            #except  : pass
 
             # Find sell + buy opportunity
             stocks_to_sell, stocks_to_buy, current_valuations = [], [], {}
-            try: stocks_to_sell, stocks_to_buy, current_valuations = self.sell_and_buy(current_price_data)
-            except: pass
+            stocks_to_sell, stocks_to_buy, current_valuations = self.sell_and_buy(current_price_data)
+            #except: pass
 
             # Execute the trades
             trade_data = None

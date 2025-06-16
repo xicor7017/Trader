@@ -1,28 +1,30 @@
                            CURRENT PORTFOLIO                           
 
-Stock: BBWI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: NRG 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: SRE 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: ETSY 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: HBI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: EIX 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: APTV 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: NCLH 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: UA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: ADM 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: OXY 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: RCL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: UAA 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: LVS 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: PHM 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: RRC 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: XEL 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: GIS 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: DHI 	 Percentage change: 0.0000% 	 Current Value: $50000.00
-Stock: CHD 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: AAL 	 Percentage change: 0.3230% 	 Current Value: $50161.51
+Stock: ETSY 	 Percentage change: 0.0365% 	 Current Value: $50018.23
+Stock: UAL 	 Percentage change: 0.1990% 	 Current Value: $50099.50
+Stock: DAL 	 Percentage change: -0.2564% 	 Current Value: $49871.78
+Stock: NCLH 	 Percentage change: 0.5424% 	 Current Value: $50271.22
+Stock: HAL 	 Percentage change: 0.8640% 	 Current Value: $50431.99
+Stock: MTCH 	 Percentage change: 0.1149% 	 Current Value: $50057.46
+Stock: ULTA 	 Percentage change: -0.4962% 	 Current Value: $49751.91
+Stock: DLTR 	 Percentage change: 0.9164% 	 Current Value: $50458.22
+Stock: ALK 	 Percentage change: -0.0512% 	 Current Value: $49974.38
+Stock: INTC 	 Percentage change: 0.5527% 	 Current Value: $50276.34
+Stock: WAT 	 Percentage change: 0.9702% 	 Current Value: $50485.09
+Stock: APTV 	 Percentage change: 0.0217% 	 Current Value: $50010.84
+Stock: FTI 	 Percentage change: 0.5541% 	 Current Value: $50277.05
+Stock: VLO 	 Percentage change: 0.9394% 	 Current Value: $50469.71
+Stock: EOG 	 Percentage change: -0.7297% 	 Current Value: $49635.16
+Stock: ILMN 	 Percentage change: 0.3046% 	 Current Value: $50670.41
+Stock: BIO 	 Percentage change: 0.2039% 	 Current Value: $50043.04
+Stock: WHR 	 Percentage change: 0.0868% 	 Current Value: $49984.60
+Stock: AMD 	 Percentage change: 0.6867% 	 Current Value: $50284.16
 
-Current Portfolio Value : $1000000.00 
-All Time High           : $1000000.00 
-All Time Low            : $1000000.00 
+Current Portfolio Value : $1003232.61 
                                                                        
+
+
+
+
 
