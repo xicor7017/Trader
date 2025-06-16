@@ -1,6 +1,6 @@
 from fetchdata import fetch_price_data
 from parameters import Parameters
-import pickle, time, math, tqdm
+import pickle, time, math, tqdm, subprocess, os
 
 class SignalGenerator:
     def __init__(self, symbols, parameters):
@@ -9,6 +9,8 @@ class SignalGenerator:
         self.unallocated_funds = 1000000
         self.all_time_high = 0.0
         self.all_time_low = float('inf')
+
+        os.mkdir("logs")
 
     def getdata(self):
         print("Fetching current price data...")
@@ -21,7 +23,8 @@ class SignalGenerator:
 
         for symbol, prices in data.items():
             normalized_volatility = prices.std() / prices.mean()
-            normalized_momentum = (prices[-1] - prices[-self.parameters.mom_window]) / prices[-self.parameters.mom_window]
+            mom_window = self.parameters.mom_window if len(prices) >= self.parameters.mom_window else len(prices)
+            normalized_momentum = (prices[-1] - prices[-mom_window]) / prices[-mom_window]
             if math.isnan(normalized_volatility) or math.isnan(normalized_momentum):
                 continue
             volatilities[symbol] = normalized_volatility
@@ -43,6 +46,8 @@ class SignalGenerator:
         data           = self.getdata()
         ranked_stocks = self.score_universe(data)
 
+        print(ranked_stocks)
+
         # Allocate funds to the top K symbols
         self.allocation = {}
         self.buy_price  = {}
@@ -62,6 +67,9 @@ class SignalGenerator:
         with open('last_state.pkl', 'wb') as f:
             pickle.dump(state, f)
 
+        for symbol, allocation in self.allocation.items():
+            print(f"Buy {symbol} \t Allocation: {allocation:.2f} \t Buy Price: {self.buy_price[symbol]:.2f}")
+        print()
         print("________FUNDS ALLOCATED________")
 
     def load_state(self, state):
@@ -118,14 +126,21 @@ class SignalGenerator:
         return stocks_to_sell, stocks_to_buy, current_valuations
     
     def execute_trade(self, stocks_to_sell, stocks_to_buy, current_valuations):
+        trade_data = ""
         if len(stocks_to_sell) > 0:
             for symbol in stocks_to_sell:
-                print(f"Selling stock: {symbol} \t Current Value: {current_valuations[symbol]:.2f}")
-
+                trade_data += f"Selling stock: {symbol} \t Current Value: {current_valuations[symbol]:.2f}\n"
+                
         if len(stocks_to_buy) > 0:
             for symbol in stocks_to_buy:
-                print(f"Buying stock: {symbol} \t Allocation: {current_valuations[symbol]:.2f}")
-            
+                trade_data += f"Buying stock: {symbol} \t Allocation: {self.allocation[symbol]:.2f}\n"
+
+        print()
+        print(trade_data)
+        print()
+
+        return trade_data
+                
     def start(self):
         # Try loading the last saved state
         try:
@@ -174,15 +189,29 @@ class SignalGenerator:
         print(display_data)
 
         return display_data
+    
+    def publish_data(self, data, filename, itr):
+        with open(filename, "w") as f:
+            f.write(data)
+
+        commit_message = f"{itr}"
+        branch = "main"
+
+        subprocess.run(["git", "add", filename])
+        subprocess.run(["git", "commit", "-m", commit_message])
+        subprocess.run(["git", "push", "origin", branch])
+
 
     def run_trading(self):
+        itr = 0
         while True:
             loop_start_time = time.time()
 
             current_price_data = self.getdata()
 
             # Show current portfolio information
-            try     : self.show_current_info(current_price_data)
+            display_data = None
+            try     : display_data = self.show_current_info(current_price_data)
             except  : pass
 
             # Find sell + buy opportunity
@@ -191,8 +220,14 @@ class SignalGenerator:
             except: pass
 
             # Execute the trades
-            try: self.execute_trade(stocks_to_sell, stocks_to_buy, current_valuations)
+            trade_data = None
+            try: trade_data = self.execute_trade(stocks_to_sell, stocks_to_buy, current_valuations)
             except: pass
+
+            current_data = display_data + "\n\n\n\n" + trade_data
+            current_time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            with open(f"logs/{current_time_str}.txt", "w") as f:
+                f.write(current_data)
 
             wait_time = int(self.parameters.iteration_time_period - (time.time() - loop_start_time))
             if wait_time > 0:

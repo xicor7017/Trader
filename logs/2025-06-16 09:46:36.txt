@@ -1,0 +1,32 @@
+                           CURRENT PORTFOLIO                           
+
+Stock: EQT 	 Percentage change: 0.0000% 	 Current Value: $50000.00
+Stock: LUMN 	 Percentage change: 0.4860% 	 Current Value: $50243.02
+Stock: AMD 	 Percentage change: 0.1319% 	 Current Value: $50065.95
+Stock: ODFL 	 Percentage change: 0.1787% 	 Current Value: $50089.34
+Stock: UAL 	 Percentage change: 0.1316% 	 Current Value: $50065.80
+Stock: BIO 	 Percentage change: 0.1077% 	 Current Value: $50053.85
+Stock: TPR 	 Percentage change: 0.0486% 	 Current Value: $50024.30
+Stock: NWL 	 Percentage change: 0.7346% 	 Current Value: $50367.31
+Stock: ILMN 	 Percentage change: 0.2930% 	 Current Value: $50146.50
+Stock: ALB 	 Percentage change: 0.2856% 	 Current Value: $50142.79
+Stock: HOG 	 Percentage change: 0.2470% 	 Current Value: $50123.51
+Stock: CF 	 Percentage change: 0.2463% 	 Current Value: $50123.15
+Stock: MO 	 Percentage change: -0.1689% 	 Current Value: $49915.54
+Stock: WHR 	 Percentage change: -0.0627% 	 Current Value: $49968.66
+Stock: WYNN 	 Percentage change: 0.3078% 	 Current Value: $50153.90
+Stock: REGN 	 Percentage change: -0.0131% 	 Current Value: $49993.47
+Stock: TTWO 	 Percentage change: -0.0442% 	 Current Value: $49977.89
+Stock: QRVO 	 Percentage change: 0.3873% 	 Current Value: $50193.65
+Stock: LEG 	 Percentage change: 0.6377% 	 Current Value: $50318.83
+Stock: INCY 	 Percentage change: 0.0495% 	 Current Value: $50024.73
+
+Current Portfolio Value : $1001992.19 
+All Time High           : $1001992.19 
+All Time Low            : $1001992.19 
+                                                                       
+
+
+
+
+

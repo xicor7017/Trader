@@ -1,0 +1,34 @@
+                           CURRENT PORTFOLIO                           
+
+Stock: EQT 	 Percentage change: 0.0171% 	 Current Value: $50008.53
+Stock: LUMN 	 Percentage change: 0.9721% 	 Current Value: $50486.03
+Stock: AMD 	 Percentage change: 0.3021% 	 Current Value: $50151.03
+Stock: ODFL 	 Percentage change: 0.4013% 	 Current Value: $50200.63
+Stock: UAL 	 Percentage change: 0.3290% 	 Current Value: $50164.50
+Stock: BIO 	 Percentage change: 0.6856% 	 Current Value: $50342.78
+Stock: TPR 	 Percentage change: -0.4070% 	 Current Value: $49796.50
+Stock: NWL 	 Percentage change: 1.1019% 	 Current Value: $50550.96
+Stock: ILMN 	 Percentage change: 0.9020% 	 Current Value: $50451.00
+Stock: ALB 	 Percentage change: 0.6527% 	 Current Value: $50326.37
+Stock: HOG 	 Percentage change: 0.6175% 	 Current Value: $50308.77
+Stock: CF 	 Percentage change: 0.0724% 	 Current Value: $50036.22
+Stock: MO 	 Percentage change: -0.0169% 	 Current Value: $49991.55
+Stock: WHR 	 Percentage change: 0.3645% 	 Current Value: $50182.23
+Stock: WYNN 	 Percentage change: 0.3990% 	 Current Value: $50199.50
+Stock: REGN 	 Percentage change: 0.4208% 	 Current Value: $50210.38
+Stock: TTWO 	 Percentage change: 0.2969% 	 Current Value: $50148.47
+Stock: QRVO 	 Percentage change: 0.7059% 	 Current Value: $50352.95
+Stock: LEG 	 Percentage change: 0.3134% 	 Current Value: $50156.71
+Stock: INCY 	 Percentage change: 0.2686% 	 Current Value: $50134.28
+
+Current Portfolio Value : $1004199.39 
+All Time High           : $1004199.39 
+All Time Low            : $1001992.19 
+                                                                       
+
+
+
+
+
+Selling stock: NWL 	 Current Value: 50550.96
+Buying stock: JBHT 	 Allocation: 1004199.39
