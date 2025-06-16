@@ -1,27 +1,27 @@
                            CURRENT PORTFOLIO                           
 
-Stock: AAL 	 Percentage change: 0.3230% 	 Current Value: $50161.51
-Stock: ETSY 	 Percentage change: 0.0365% 	 Current Value: $50018.23
-Stock: UAL 	 Percentage change: 0.1990% 	 Current Value: $50099.50
-Stock: DAL 	 Percentage change: -0.2564% 	 Current Value: $49871.78
-Stock: NCLH 	 Percentage change: 0.5424% 	 Current Value: $50271.22
-Stock: HAL 	 Percentage change: 0.8640% 	 Current Value: $50431.99
-Stock: MTCH 	 Percentage change: 0.1149% 	 Current Value: $50057.46
-Stock: ULTA 	 Percentage change: -0.4962% 	 Current Value: $49751.91
-Stock: DLTR 	 Percentage change: 0.9164% 	 Current Value: $50458.22
-Stock: ALK 	 Percentage change: -0.0512% 	 Current Value: $49974.38
-Stock: INTC 	 Percentage change: 0.5527% 	 Current Value: $50276.34
-Stock: WAT 	 Percentage change: 0.9702% 	 Current Value: $50485.09
+Stock: AAL 	 Percentage change: -0.5344% 	 Current Value: $49732.81
+Stock: ETSY 	 Percentage change: -0.2734% 	 Current Value: $49863.32
+Stock: UAL 	 Percentage change: -0.5264% 	 Current Value: $49736.81
+Stock: DAL 	 Percentage change: -0.5584% 	 Current Value: $49720.81
+Stock: NCLH 	 Percentage change: 0.4611% 	 Current Value: $50230.54
+Stock: HAL 	 Percentage change: 0.6592% 	 Current Value: $50329.60
+Stock: MTCH 	 Percentage change: 0.3119% 	 Current Value: $50155.97
+Stock: ALK 	 Percentage change: -0.6047% 	 Current Value: $49697.65
+Stock: INTC 	 Percentage change: 0.5769% 	 Current Value: $50288.43
+Stock: WAT 	 Percentage change: 0.1704% 	 Current Value: $50085.18
 Stock: APTV 	 Percentage change: 0.0217% 	 Current Value: $50010.84
-Stock: FTI 	 Percentage change: 0.5541% 	 Current Value: $50277.05
-Stock: VLO 	 Percentage change: 0.9394% 	 Current Value: $50469.71
-Stock: EOG 	 Percentage change: -0.7297% 	 Current Value: $49635.16
-Stock: ILMN 	 Percentage change: 0.3046% 	 Current Value: $50670.41
-Stock: BIO 	 Percentage change: 0.2039% 	 Current Value: $50043.04
-Stock: WHR 	 Percentage change: 0.0868% 	 Current Value: $49984.60
-Stock: AMD 	 Percentage change: 0.6867% 	 Current Value: $50284.16
+Stock: FTI 	 Percentage change: 0.9040% 	 Current Value: $50452.02
+Stock: ILMN 	 Percentage change: -0.6430% 	 Current Value: $50191.75
+Stock: BIO 	 Percentage change: -0.8132% 	 Current Value: $49535.09
+Stock: WHR 	 Percentage change: -0.3799% 	 Current Value: $49751.48
+Stock: ALGN 	 Percentage change: -0.9693% 	 Current Value: $50072.44
+Stock: AMP 	 Percentage change: 0.2611% 	 Current Value: $49547.30
+Stock: APA 	 Percentage change: -0.4423% 	 Current Value: $50346.28
+Stock: MCK 	 Percentage change: 0.2519% 	 Current Value: $50109.88
+Stock: AVGO 	 Percentage change: -0.3503% 	 Current Value: $49808.92
 
-Current Portfolio Value : $1003232.61 
+Current Portfolio Value : $999667.12 
                                                                        
 
 

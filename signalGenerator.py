@@ -94,7 +94,7 @@ class SignalGenerator:
             buy_price     = self.buy_price[symbol]            
             percentage_change = ((current_price - buy_price) / buy_price)
 
-            if np.abs(percentage_change) > self.parameters.percentage_change_threshold:
+            if (percentage_change > self.parameters.percentage_change_threshold) or (percentage_change < -5*self.parameters.percentage_change_threshold):
                 stocks_to_sell.append(symbol)
                 unallocated_funds += allocation + (allocation * percentage_change)
 
