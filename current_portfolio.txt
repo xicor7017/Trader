@@ -1,30 +1,24 @@
                            CURRENT PORTFOLIO                           
 
-Stock: ALGN 	 Percentage change: 0.2691% 	 Current Value: $50698.60
-Stock: AMP 	 Percentage change: -0.4174% 	 Current Value: $49212.02
-Stock: MCK 	 Percentage change: -0.2782% 	 Current Value: $49844.94
-Stock: NVR 	 Percentage change: 0.3998% 	 Current Value: $48950.26
-Stock: ALIT 	 Percentage change: 0.0000% 	 Current Value: $50276.88
-Stock: EIX 	 Percentage change: 0.1658% 	 Current Value: $50765.77
-Stock: PSA 	 Percentage change: -0.1291% 	 Current Value: $50234.11
-Stock: TPR 	 Percentage change: 0.1307% 	 Current Value: $51231.45
-Stock: HBI 	 Percentage change: -0.2172% 	 Current Value: $50109.39
-Stock: NUE 	 Percentage change: 0.3257% 	 Current Value: $49746.41
-Stock: CNC 	 Percentage change: 0.4222% 	 Current Value: $50359.42
-Stock: URI 	 Percentage change: -0.0214% 	 Current Value: $50480.56
-Stock: BBWI 	 Percentage change: 0.0000% 	 Current Value: $50491.35
-Stock: QRVO 	 Percentage change: 0.4351% 	 Current Value: $50711.04
-Stock: ILMN 	 Percentage change: 0.4786% 	 Current Value: $50733.02
-Stock: UAL 	 Percentage change: -0.2034% 	 Current Value: $50006.52
-Stock: OGN 	 Percentage change: -0.4880% 	 Current Value: $49863.87
-Stock: CVS 	 Percentage change: -0.6891% 	 Current Value: $49586.03
-Stock: DVN 	 Percentage change: -0.1587% 	 Current Value: $49931.88
-Stock: ENPH 	 Percentage change: 0.1963% 	 Current Value: $51160.02
+Stock: CEROW 	 Percentage change: -9.4444% 	 Current Value: $45476.71
+Stock: JBDI 	 Percentage change: -4.0690% 	 Current Value: $48176.26
+Stock: APPS 	 Percentage change: -3.3871% 	 Current Value: $48518.69
+Stock: RPID 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: PN 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: AEHL 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: TOP 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: PKOH 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: CASK 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: HOWL 	 Percentage change: -2.3166% 	 Current Value: $49056.29
+Stock: INTJ 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: CAMP 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: AKAN 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: ILPT 	 Percentage change: 1.3001% 	 Current Value: $50872.59
+Stock: ABVC 	 Percentage change: 0.0000% 	 Current Value: $50219.68
+Stock: OKYO 	 Percentage change: 2.2996% 	 Current Value: $51374.54
+Stock: NCRA 	 Percentage change: 5.2632% 	 Current Value: $52862.82
+Stock: SGBX 	 Percentage change: 0.0143% 	 Current Value: $50226.84
+Stock: ENPH 	 Percentage change: 0.4711% 	 Current Value: $50456.27
+Stock: IMCC 	 Percentage change: 0.4158% 	 Current Value: $50428.50
 
-Current Portfolio Value : $1004393.57 
-                                                                       
-
-
-
-
-
+Current Portfolio Value : $999646.30 
