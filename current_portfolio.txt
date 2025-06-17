@@ -1,24 +1,45 @@
                            CURRENT PORTFOLIO                           
 
-Stock: CEROW 	 Percentage change: -9.4444% 	 Current Value: $45476.71
-Stock: JBDI 	 Percentage change: -4.0690% 	 Current Value: $48176.26
-Stock: APPS 	 Percentage change: -3.3871% 	 Current Value: $48518.69
-Stock: RPID 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: PN 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: AEHL 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: TOP 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: PKOH 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: CASK 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: HOWL 	 Percentage change: -2.3166% 	 Current Value: $49056.29
-Stock: INTJ 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: CAMP 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: AKAN 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: ILPT 	 Percentage change: 1.3001% 	 Current Value: $50872.59
-Stock: ABVC 	 Percentage change: 0.0000% 	 Current Value: $50219.68
-Stock: OKYO 	 Percentage change: 2.2996% 	 Current Value: $51374.54
-Stock: NCRA 	 Percentage change: 5.2632% 	 Current Value: $52862.82
-Stock: SGBX 	 Percentage change: 0.0143% 	 Current Value: $50226.84
-Stock: ENPH 	 Percentage change: 0.4711% 	 Current Value: $50456.27
-Stock: IMCC 	 Percentage change: 0.4158% 	 Current Value: $50428.50
+Stock: HOVRW 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: MATH 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: PN 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: AEHL 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: TMCWW 	 Percentage change: 1.2064% 	 Current Value: $25292.64
+Stock: SNPX 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: BMEA 	 Percentage change: -1.2509% 	 Current Value: $24678.53
+Stock: LIMN 	 Percentage change: -1.3250% 	 Current Value: $24660.02
+Stock: AIFU 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: INVZ 	 Percentage change: -0.0384% 	 Current Value: $24981.55
+Stock: PKOH 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: YSXT 	 Percentage change: 3.3333% 	 Current Value: $25824.20
+Stock: COYA 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: INSE 	 Percentage change: -0.9772% 	 Current Value: $24746.94
+Stock: MODD 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: BGFV 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: AYTU 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: SKYX 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: GRAL 	 Percentage change: 1.0437% 	 Current Value: $25251.98
+Stock: LSAK 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: SRM 	 Percentage change: 0.5168% 	 Current Value: $25120.32
+Stock: KRRO 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: SNYR 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: NEON 	 Percentage change: -0.5750% 	 Current Value: $24847.46
+Stock: NNE 	 Percentage change: -0.2655% 	 Current Value: $24924.81
+Stock: SGBX 	 Percentage change: -2.8289% 	 Current Value: $24284.19
+Stock: KIRK 	 Percentage change: 1.5798% 	 Current Value: $25385.97
+Stock: YHC 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: RADX 	 Percentage change: -1.3779% 	 Current Value: $24646.79
+Stock: BTM 	 Percentage change: 1.0000% 	 Current Value: $25241.07
+Stock: ARMG 	 Percentage change: 0.3096% 	 Current Value: $25068.54
+Stock: PRAX 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: EVGO 	 Percentage change: 2.2388% 	 Current Value: $25550.66
+Stock: ACRV 	 Percentage change: 0.4444% 	 Current Value: $25102.23
+Stock: ENPH 	 Percentage change: 2.1764% 	 Current Value: $25535.07
+Stock: FUFU 	 Percentage change: 1.2054% 	 Current Value: $25292.41
+Stock: ASNS 	 Percentage change: 0.0000% 	 Current Value: $24991.16
+Stock: ABTS 	 Percentage change: -1.9139% 	 Current Value: $23510.25
+Stock: NSPR 	 Percentage change: 0.0000% 	 Current Value: $23968.99
+Stock: RPID 	 Percentage change: 0.0000% 	 Current Value: $23968.99
 
-Current Portfolio Value : $999646.30 
+Current Portfolio Value : $997724.46 
+                                                                       
