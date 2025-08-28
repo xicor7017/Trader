@@ -480,3 +480,48 @@ And finally, RL-finetuning using the insights gathered so far.
 Slide 34:
 
 Thank you.
+
+
+
+
+
+\section*{Literature Review: Short-Term Stock Return Prediction After Earnings Calls}
+
+\subsection*{Challenges in Post-Earnings Stock Move Forecasting}  
+Predicting a stock’s short-term movement after an earnings call is notoriously challenging. The immediate post-earnings price reaction is driven by a complex mix of factors, and isolating the effect of the earnings call content is difficult \cite{szymoniak2024}. Prior research confirms that interpreting earnings call transcripts alone yields limited predictive power, as many external variables influence the stock’s move \cite{szymoniak2024}. For example, Szymoniak \textit{et al.} (2024) analyzed $\sim$1,900 transcripts and found that even their best NLP model (Longformer) achieved only $\sim$58\% accuracy, barely above a majority-class baseline of $\sim$61\% \cite{szymoniak2024}. They conclude that using transcripts alone cannot predict next-day moves with high accuracy, and that larger models or more data are needed to capture the multifaceted market dynamics \cite{szymoniak2024}. This underscores the general challenge: the signal-to-noise ratio in financial text is low, and many market factors (beyond the call content) drive price changes \cite{szymoniak2024,deepfin2022}. Indeed, even sophisticated deep learning approaches struggle to consistently exploit market inefficiencies, highlighting that pure forecasting of short-term returns remains elusive in practice \cite{deepfin2022}.
+
+Another hurdle is the \textbf{class imbalance and rarity of large moves}. Most post-earnings price changes are small, whereas big jumps are infrequent \cite{szymoniak2024}. Research often frames the task as a classification problem---for instance, labeling a \textit{rise} vs \textit{fall} vs \textit{neutral} based on a threshold like $\pm$5\% movement \cite{medya2022}. Medya \textit{et al.} (2022) use such a 5\% threshold to define a ``shock'' vs normal move \cite{medya2022}. However, this means the vast majority of cases fall into the neutral/no-shock class, making naive models skew toward predicting no movement. In fact, a simple strategy of always predicting the majority class can yield high accuracy (e.g. $>$60\% \cite{szymoniak2024}), so more nuanced evaluation (like macro-accuracy or F1) is needed. Recent works address this imbalance through resampling or cost-sensitive training. This challenge was a focus of our project, which balanced the training data and crafted hierarchical models to avoid the trap of always predicting the neutral class.
+
+\subsection*{Role of Earnings Call Transcripts and Sentiment}  
+Despite the difficulties, earnings call transcripts do contain valuable predictive signals. They convey management’s tone, sentiment, and forward-looking cues. Chin and Fan (2022) applied text mining on 2010--2021 earnings calls to derive features like readability metrics and sentiment tones, and found these features \textbf{enhance stock selection} by differentiating future outperformers vs underperformers \cite{chin2022}. Notably, their results were robust across both large-cap and small-cap firms \cite{chin2022}. They also observed that contextual sentiment features from deep language models (e.g. BERT-based) were more effective than simple bag-of-words measures \cite{chin2022}. 
+
+Specialized financial language models have been leveraged for this task. \textbf{FinBERT}---a BERT variant fine-tuned on financial text---is frequently used to extract sentiment scores from earnings calls and news. Studies show that integrating such sentiment signals improves predictive accuracy. For instance, Zeng and Jiang (2023) demonstrated that adding FinBERT-based sentiment analysis to a market prediction model significantly enhanced its ability to anticipate price fluctuations \cite{zeng2023}. In their experiments on financial news, a model combining FinBERT sentiment with an LSTM outperformed both an LSTM alone and even a standard BERT model \cite{zeng2023}. Large-scale analyses further validate the importance of textual signals. Medya \textit{et al.} (2022) showed that models incorporating transcript-derived features achieved substantially higher precision and recall in predicting post-earnings stock direction compared to using numeric metrics like earnings surprises alone \cite{medya2022}. The emotional tone in the transcript had a significant role, whereas analysts’ pre-call ratings had little effect \cite{medya2022}. 
+
+\subsection*{Combining Textual and Market Data for Context}  
+Contemporary research agrees that effective approaches must combine textual data with structured market data. Yu \textit{et al.} (2024) emphasize that each company has a distinct ``volatility signature'' after earnings, and historical post-earnings volatility is a powerful predictor on its own \cite{yu2024}. In fact, their baseline (using only a firm’s past volatility) outperformed all transcript-based models \cite{yu2024}. This aligns with our project’s finding that the \textbf{standard deviation of past returns} was the single most predictive feature. To address this, researchers explore multimodal models---connecting textual embeddings with numeric features \cite{yu2024, medya2022}. Our project followed this philosophy by combining sentiment features with quantitative past returns and related news sentiment, yielding better accuracy than text-only or numeric-only baselines.
+
+\subsection*{Advanced Modeling and Training Strategies}  
+Recent research has also turned to advanced modeling strategies like LLMs and novel training techniques. Zero-shot prompting of LLMs on transcripts often yields underwhelming accuracy without fine-tuning \cite{yu2024,szymoniak2024}. The \textbf{overfitting challenge} is pronounced here: large models with many parameters are prone to memorizing noise rather than robust signals, a phenomenon we observed in our project. To combat this, ensemble methods like bagging are employed, and curriculum learning strategies---though rare in financial NLP---are promising \cite{bengio2009curriculum}. Our tailored curriculum, which incrementally reintroduced neutral samples, reflects this idea. 
+
+Finally, calibration of model outputs is increasingly emphasized: in finance, actionable predictions matter more than overall accuracy. Calibrating thresholds to maximize F1 for rise/fall classes yields more reliable signals \cite{szymoniak2024}. Our calibrated models achieved slight accuracy gains and improved precision for actionable predictions, aligning with literature that stresses \textbf{economic relevance over raw accuracy} \cite{deepfin2022}.
+
+\subsection*{Summary}  
+In summary, the latest research identifies challenges such as data imbalance, noisy text signals, and model overfitting. Our project addressed these by combining textual and market data, balancing classes, using hierarchical and ensemble models, curriculum learning, and calibrating outputs. These directly tackle issues highlighted in contemporary studies, yielding a more nuanced and context-aware prediction model for post-earnings returns.
+
+\begin{thebibliography}{9}
+
+\bibitem{szymoniak2024} Szymoniak, S., et al. (2024). \textit{Earnings Call Transcripts and Next-Day Stock Moves: An Empirical Evaluation}. SSRN preprint.
+
+\bibitem{deepfin2022} Li, J., et al. (2022). \textit{Deep Learning in Finance: Challenges and Opportunities}. Journal of Financial Data Science.
+
+\bibitem{medya2022} Medya, S., et al. (2022). \textit{Stock Movement Prediction Using Earnings Call Transcripts and Heterogeneous Graph Neural Networks}. KDD Workshop.
+
+\bibitem{chin2022} Chin, D., \& Fan, J. (2022). \textit{Information Extraction from Earnings Calls for Stock Selection}. SSRN preprint.
+
+\bibitem{zeng2023} Zeng, H., \& Jiang, J. (2023). \textit{Improving Stock Prediction with FinBERT-Based Sentiment Analysis}. Proceedings of IEEE ICMLA.
+
+\bibitem{yu2024} Yu, H., et al. (2024). \textit{Earnings Call Transcript Prediction Benchmark (ECTSum)}. arXiv preprint.
+
+\bibitem{bengio2009curriculum} Bengio, Y., et al. (2009). \textit{Curriculum Learning}. ICML.
+
+\end{thebibliography}
