@@ -1,0 +1,482 @@
+
+Slide 1:
+
+
+Good morning everyone, and thank you for joining in for my presentation. As most of you know, I am Ashish Malik, I am a summer associate with the Applied AI team and managed by Su.
+
+I will be presenting the progress I have made on my intern project, titled Return modeling. Where we are forecasting the short term post earnings moves of the stock.
+
+------------------------------------------------------------
+
+
+Slide 2:
+
+The table of content is basically the same as my presentation last week. However, I will be going over the first parts pretty quickly to alot more time to some of the experiments I was not able to include in the last presentation and also go over some more experiments I did recently.
+
+
+- The presentation will start with the problem definition, and why it is a hard yet important problem to tackle.
+
+- Next we will go over the data that we are workin with.
+
+- Then I will quickly summarize the baseline approaches.
+
+- Finally, I will dive into the main experimental section. And discuss the methods, motivation behind them and the insights we got from them.
+
+------------------------------------------------------------
+
+Slide 3:
+
+Starting with Introduction.
+
+------------------------------------------------------------
+
+Slide 4:
+
+The problem that we are dealing with is predicting the stock price movement shortly after the companies have their earnings call.
+
+Suppose, tomorrow microsoft have their earnings calls. We would like to know how the stock price might move when this information comes out.
+
+Formally, the task is to forecast short-term equity returns by leavarging the text data and well as the numeric data.
+
+The text data includes, the transcript from the earning call, and also the broker research that we have available at BAM.
+
+The numerical data is the past returns from the stock, up-to 250 days before the date of the earnings call.
+
+
+------------------------------------------------------------
+
+Slide 5:
+
+Why do, we as a hedge fund care about this problem?
+
+Because having such information allows us to generate Alpha which can lead to many money making ideas. It can have a direct impact on the firm's PnL.
+
+It can be used to generate systematic alpha.
+Can offer insights to traders.
+And can let use test hypothetical market scenarios 
+
+The goal of this project, is therefore use the AI to squeeze out statistically significant patterns in the data that we can leverage.
+
+
+------------------------------------------------------------
+
+Slide 6:
+
+Let's understand the data we are working with in this project.
+
+
+------------------------------------------------------------
+
+Slide 7:
+
+We have 7002 unique data samples. Each sample has a earnings call transcript, broker research, past returns and future returns which are our prediction target.
+
+The transcripts and broker research each have thousands of words along with a significant variation in their lengths between data-samples.
+
+The data spans from January-2020 to Nov-2024.
+
+------------------------------------------------------------
+
+Slide 8:
+
+Here we see the histogram of log frequency returns vs their values for one day after the call and the average of 30 days after the earnings call.
+
+We see that most of the moves are small, and big moves are quite rare.
+We also found no correlation between past and future returns.
+
+------------------------------------------------------------
+
+Slide 9:
+
+We follow some common evaluation protocols for all of our experimentations:
+
+1. First the test and train splits are consistent across  all experiments. All 2024 data is treated as test data and the rest is training data to avoid data leakage in the LLMs.
+
+
+------------------------------------------------------------
+
+Slide 10:
+
+We also formulate the problem as a classification formulation rather than regression
+
+There are 2 main reasons for this choice:
+
+1. Our data, including our prediction targets are noisy. It does not mean that the returns after the earnings call are noisy, because they are not as they happened in the real world. They are however, effectively noisy for us because stock price moves for a lot of reasons, not all of which can be captured by our input data. Therefore, our input data may lack the predictive information to predict the ground truth returns in all the cases accurately.
+
+2. Second, using a classification formulation allows us to directly predict actionable insights. We basically want a buy or sell conviction which we can get with a classification formulation. It is also an easier problem to learn for the models.
+
+
+We therefore divide our entire data into 3 classes. Fall / Neutral and Rise. The fall class indicates the returns beings less than -5%, Rise class is returns more than 5% and Neutral class for returns between -5 and +5%.
+
+
+------------------------------------------------------------
+
+Slide 11:
+
+Next, we talk about the performance we got from our baseline methods.
+
+------------------------------------------------------------
+
+Slide 12:
+
+The first baseline is LLM prompting. We prompt the gpt-4o and o4-mini models to make the predictions based on our textual and numerical data.
+
+
+------------------------------------------------------------
+
+Slide 13:
+
+Here we see the confusion matrix of both the models, with gpt-4o on the left and o4-mini on the right.
+
+The x-axis is the predicted label, and y-axis is the true label.
+
+
+From the macro accuracy numbers, we see that both these models are not really great. They have about 40% accuracy, with o4-mini, the reasoning model performing slightly better.
+
+
+------------------------------------------------------------
+
+Slide 14:
+
+The next baseline we tried are the BAM-embeddings
+
+We use the text-summaries generated by o4-mini to get the embeddings of the data., These embeddings are then used to train a deep network to make the predictions.
+
+
+------------------------------------------------------------
+
+Slide 15:
+
+We trained a feedforward, and a transformer model using these embeddings to make the classifications. As we can see, the predictions are dominated by the neutral class, and the average macro accuracies are close to 33%
+
+_____________________________________________________________
+_____________________________________________________________
+
+So, is it wise to just prompt the best open source alms to get the classifications. The answer is no. Almost everyone has access to these models and earnings calls. Even retail traders. This widespread and easily availability basically takes away any edge we might have with them.
+
+_____________________________________________________________
+_____________________________________________________________
+
+
+
+Slide 16:
+
+Now, we get into the main part of the presentation, and I will take more time per slide from now on.
+
+_____________________________________________________________
+
+
+Slide 17:
+
+For the classical method, we use XGboost model to train our classifier. However, xgboost cannot take text as input
+
+------------------------------------------------------------
+
+Slide 18:
+
+We therefore, perform some feature engineering on the textual data using FinBERT. Which is an LLM trained for sentiment analysis. 
+
+We use the finBERT model, on the earnings call and broker research to engineer the features independently.
+
+Namely, we calculate the mean sentiment, standard deviation of the sentiment, and the impact of the sentiment in the text, which is the log of the size of times the mean sentiment.
+
+_____________________________________________________________________
+
+
+Slide 19:
+
+This sentiment vector, along with the past returns is the input vector to the xgboost model for each data-sample.
+
+------------------------------------------------------------
+
+Slide 20:
+
+We see that the base version fails pretty badly. It basically just predicts the most dominant class in the data.
+
+So far, we have noticed that all of our learning based methods basically fall back to predicting the most dominant neutral class. 
+
+So, at this point, we decided to balance our training data. We drop extra samples from the training data to have the same number of samples for each class. 
+
+It is important to note here that we do not balance the test dataset as we want it to represent the true distribution of the data.
+
+
+------------------------------------------------------------
+
+Slide 21:
+
+This insight leads us to our first usable model !
+We see that this model performs with 5% more accuracy on the test data-set compared to the best model so far. 
+
+We also performed some input features importance analysis on it to find out what the most informative input features are for making the predictions.
+
+We see that by far, the most predictive feature is the standard deviation of the past returns. Followed by the different sentiment features from the earnings.
+
+This leads to another useful insight. The market context, which is reflected in the standard deviation of the past returns in this example, is a powerful feature for this prediction problem. 
+
+Therefore to add additional market context, we augment our data with news articles that came out leading upto the earnings call to provide additional information to our model. Then we did the same feature engineering on those articles and added that to the input vector to the model.
+
+
+------------------------------------------------------------
+
+Slide 22:
+
+With this new information, we see that the model gains another 1.5% in performance, and we see that the news articles are in the top 4 of the most predictive features.
+
+
+With training data balancing, and careful feature engineering, we have finally trained a non-trivial and useful classifier. However, we can probably do better than this.
+
+
+------------------------------------------------------------
+
+
+Slide 23:
+
+One big problem right now is that we are dropping a lot of samples from the neutral class, which means we are potentially losing a lot of information which might be useful for the model.
+
+If we think about it, a stock that can move upto 15% just with the earnings call probably belongs to a firm with a small market cap, and vice versa for smaller returns.
+
+------------------------------------------------------------
+
+Slide 24:
+
+Here we try a hierarchy of xgboost models.
+
+The architecture has 15 sub-xgboost models. Each of these xgboost models are trained on classes derived and balanced for different thresholds. Starting from 1% all the way to 15%.
+
+Effectively, these sub_XGBoosts are experts in a certain segment of the market based on the market-cap.
+
+The output probabilities of these xgboost models, is used to train the main xgboost model.
+
+Since we are balancing the classes separately for each sub xgboost model, including the xgboost model that works on the 1% threshold, we are effectively using almost the entire training dataset.
+
+
+------------------------------------------------------------
+
+Slide 25:
+
+
+Using this model, we get almost the same level of performance as the previous best model, while using almost the entire training data.
+
+This is the first non-trivial model so far that works using the entire training data.
+
+However, there are other ways to sub-sample the data to use the entire training data. To that end, we try bagging.
+
+
+------------------------------------------------------------
+
+Slide 26:
+
+When we train a bag of 10 xgboost models, we get the following results.
+
+An internesting thing to note here is that, for the directional predictions of Rise and fall, even when the model fails to make the correct prediction, it is more likely predict neutral rather than being incorrect and predict the opposite direction. In a sense, this model has a better understanding of the directionality of predictions. And we will come back to this later in the slides.
+
+
+-----------------------------------------------------------
+
+Slide 27:
+
+We also tried the same approach with different classification thresholds from 1% to all the way upto 9%. As expected, the average macro accuracies increase monotonically, however, with a few caveats.
+
+Setting the optimal threshold is a 3 way optimization problem.
+1. Higher thresholds make classification easier.
+2. Higher thresholds mean exponentially less number of data samples in non-neutral classes.
+3. There is also trading utility, in question here.
+
+With these, we found that 5% is a good location on the Pareto front for us.
+
+
+------------------------------------------------------------
+
+Slide 28:
+
+So, what have we learned so far?
+
+First of all, we can train a useful classifier with our data. Specially when we add more market context.
+
+Learning from all the data naively is hard, and balancing makes the problem easier.
+
+We can use clever methods to leaverage the entire dataset to train useful methods.
+
+_____________________________________________________________
+_____________________________________________________________
+
+How do these insights help us?
+
+We know that simple classical methods, combined with data balancing, or clever hierarchical approaches can help us generate useful models. This adds a skillset floor to the people who can try this, thereby increasing our edge in the market a bit.
+_____________________________________________________________
+_____________________________________________________________
+
+
+------------------------------------------------------------
+
+
+Slide 29:
+
+Finally, we use deep learning and combine the insights we have gathered so far.
+
+
+------------------------------------------------------------
+
+Slide 30:
+
+The idea, is to train a transformer model, using features which we do not manually engineer.
+
+We use the representations from the final layers of the LLM as input features to the transformer model. We use 3 separate LLMs for our testing. These are Llama models that are intruction fine-tuned. Based on their sizes, we will simply call them the small, medium and large llm.
+
+These are used to process the textual data into vectorized representations, which along with the past returns train the transformer model to make the prediction.
+
+We experiment with 3 different loss approaches to train this model:
+1. First is cross entropy with unbalanced training data.
+2. Second is weighted cross entropy loss with unbalanced training data.
+3. Cross entropy with balanced training data.
+
+3 different LLMs combined with 3 different model training approaches gives us 9 results.
+
+
+------------------------------------------------------------
+
+Slide 31:
+
+We see a lot of data here. But the 3 important takeaways from this are:
+
+1. We get non-trivial performance with small and medium LLM as feature extractor.
+2. Performance of the balanced training data is still the best, followed by the weighted cross entropy approach.
+3. Large LLM, surprisingly has almost random level performance in all cases.
+
+This is a surprising result. Intuitivly, we would expect that the larger LLM can generate the best features to make predictions, However, we do not see that here.
+
+
+We came up with a hypothesis here. We have an over-parameterized network to process these large representations, combined with the very noisy setting means that the network parameters are effectively learning a lot of noise and not focusing on the harder to learn but robust features in the data. 
+
+To test this hypothesis, we retrain the Large LLM transformer version with 2 progressively smaller transformer sizes.
+
+
+------------------------------------------------------------
+
+Slide 32:
+
+We notice that as the network size decreases, the model's performance increases. Thereby supporting our hypothesis.
+
+If we pay attention to the confusion matrix for the smallest network model.
+
+
+------------------------------------------------------------
+
+Slide 33:
+
+We see that this is our best performing model so far. The average macro accuracy is about 50%. It has a Sharpe ratio of over 2 on our test data.
+
+
+------------------------------------------------------------
+
+Slide 34:
+
+We now know that learning from all the samples is hard for the model, so as our next set of experimentations, we try a data curriculum approach. The basic idea of this approach is to slowly increase the complexity of the data that the model is currently learning from.
+
+However, the difficulty of the data point, not just depend on the data point, but also on the current weights of the network as that determines what the loss landscape looks like.
+
+We therefore came up with this particular data curriculum algorithm.
+
+We first train the model on the balanced data for N epochs, which is 4 in our case.
+
+Then for each epoch, we include 3 different parts of the dataset.
+
+1. We include all the rise and fall samples. So the curriculum effectively works only on the neutral samples.
+
+2. We include all the neutral samples that the model can correctly predict that that moment of training. Because these are easy for the model.
+
+And finally
+
+3. We include the incorrectly labeled neutral samples, where the prediction confidence is 33$ + x where x goes up with training. So we are including the wrong labels first where the model is closer to make the correct prediction. And make it hard slowly.
+
+
+
+------------------------------------------------------------
+
+Slide 35:
+
+And we see that this model with data curriculum has a better sense of directionality. The same as the bagging example. Which suggests that we can calibrate the prediction probabilities to squeeze out more useful performance from the model.
+
+
+------------------------------------------------------------
+
+Slide 36:
+
+Learned model suggest that the prediction probabliities are probably mis-calibrated to make the predictions. This makes gauging their performance and comparing them hard.
+
+
+------------------------------------------------------------
+
+Slide 37:
+
+So, we start with 3 versions of the transformer model.
+
+Version 1: Trained with unbalanced data.
+Version 2: Trained with unbalanced data but with weighted cross entropy loss.
+Version 3: Trained with unbalanced data, weighted cross entropy loss and with data curriculum.
+
+
+------------------------------------------------------------
+
+Slide 38:
+
+We plot their PR and AUC curves.
+
+Here the yellow line is for Fall class vs the Rest and Blue is the Rise class vs the Rest.
+
+And we decide to calibrate the model by selecting the probability points that maximizes the mean F1 score of both red and blue lines in each case.
+
+
+------------------------------------------------------------
+
+Slide 39:
+
+Once we calibrate these models, we get the following results:
+
+1. In each case, we see a modest uptick in average macro accuracy.
+2. Probabity calibration helps, specially for non-neutral classes at the expense of neutral classes, therefore more actionable insights.
+3. Data curriculum adds value, but only incremental (gives more actionable predictions)
+4. However,the main bottleneck, even after calibration remains the descriminatory power of the model.
+
+------------------------------------------------------------
+
+Slide 31:
+
+Finally, what have we achieved and learned.
+
+
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+_____________________________________________________________
+_____________________________________________________________
+
+
+How do these insights help us: Well, first of all, we find out which things work with deep learning and which do not.
+
+Next, in the age where people have tons and tons of noisy data, and just thrown them inside a large model to train or to finetune. It is really crucial to understand that in this specific setting of really noisy data. Having a lot of parameters in the architecture means that it is much easier for the model to remember the correct classification targets from input noise rather than learning the robust patters which are rare in the data. It takes a fine-grained understanding of the nuances of Deep learning to get to this point and not just throw all the data into a large model and pray to the gradient descent gods.
+
+
+_____________________________________________________________
+_____________________________________________________________
+
+
+
+------------------------------------------------------------
+
+Slide 33:
+
+Next steps and further experimentations include
+
+Exploring specific pruning methods to manage network parameters.
+
+And finally, RL-finetuning using the insights gathered so far.
+
+
+------------------------------------------------------------
+
+Slide 34:
+
+Thank you.
